@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Portfolio de Darío Erades — Estudiante de Ingeniería Informática y Desarrollador Java con 5 años de experiencia." />
+<title>Darío Erades — Developer Portfolio</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="cursor-dot"></div>
+
+<canvas id="bg-canvas"></canvas>
+
+<div class="noise"></div>
+
+<div class="progress-bar"><div class="progress-bar__fill"></div></div>
+
+<nav class="nav" id="nav">
+  <a href="#home" class="nav__logo">
+    <span class="logo-bracket"><</span>DE<span class="logo-bracket">/></span>
+  </a>
+  <ul class="nav__links">
+    <li><a href="#about" data-text="Sobre mí">Sobre mí</a></li>
+    <li><a href="#skills" data-text="Skills">Skills</a></li>
+    <li><a href="#experience" data-text="Experiencia">Experiencia</a></li>
+    <li><a href="#projects" data-text="Proyectos">Proyectos</a></li>
+    <li><a href="#contact" data-text="Contacto">Contacto</a></li>
+  </ul>
+  <a href="https://github.com/DarioErades" target="_blank" rel="noopener" class="nav__cta magnetic">
+    <span>GitHub</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+  </a>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero__grid"></div>
+  <div class="hero__content">
+    <div class="hero__tagline reveal">
+      <span class="dot"></span>
+      <span>Disponible para proyectos</span>
+    </div>
+    <h1 class="hero__title">
+      <span class="line"><span class="word">Darío</span></span>
+      <span class="line"><span class="word gradient-text">Erades.</span></span>
+    </h1>
+    <p class="hero__subtitle reveal">
+      <span class="typed" id="typed"></span><span class="cursor-blink">|</span>
+    </p>
+    <p class="hero__description reveal">
+      Construyendo software robusto en <strong>Java</strong> desde hace <strong>5 años</strong>.
+      Estudiante de Ingeniería Informática, creador de bots usados por más de <strong>25.000 personas</strong>
+      y colaborador con creadores de contenido de más de <strong>400.000 suscriptores</strong>.
+    </p>
+    <div class="hero__actions reveal">
+      <a href="#projects" class="btn btn--primary magnetic">
+        <span>Ver proyectos</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#contact" class="btn btn--ghost magnetic">Hablemos</a>
+    </div>
+  </div>
+
+  <div class="hero__scroll">
+    <span>Scroll</span>
+    <div class="hero__scroll-line"></div>
+  </div>
+
+  <div class="hero__stats">
+    <div class="stat reveal"><span class="stat__num" data-count="5">0</span><span class="stat__plus">+</span><span class="stat__label">años de experiencia</span></div>
+    <div class="stat reveal"><span class="stat__num" data-count="25">0</span><span class="stat__plus">K+</span><span class="stat__label">usuarios alcanzados</span></div>
+    <div class="stat reveal"><span class="stat__num" data-count="400">0</span><span class="stat__plus">K+</span><span class="stat__label">audiencia colaborada</span></div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>JAVA</span><span>★</span>
+    <span>SPRING BOOT</span><span>★</span>
+    <span>DISCORD BOTS</span><span>★</span>
+    <span>JDA</span><span>★</span>
+    <span>SQL</span><span>★</span>
+    <span>BACKEND</span><span>★</span>
+    <span>APIs REST</span><span>★</span>
+    <span>JAVA</span><span>★</span>
+    <span>SPRING BOOT</span><span>★</span>
+    <span>DISCORD BOTS</span><span>★</span>
+    <span>JDA</span><span>★</span>
+    <span>SQL</span><span>★</span>
+    <span>BACKEND</span><span>★</span>
+    <span>APIs REST</span><span>★</span>
+  </div>
+</div>
+
+<section class="section" id="about">
+  <div class="section__head">
+    <span class="section__tag reveal">01 — Sobre mí</span>
+    <h2 class="section__title reveal">Curioso por naturaleza, <span class="gradient-text">ingeniero por vocación.</span></h2>
+  </div>
+
+  <div class="about__grid">
+    <div class="about__text reveal">
+      <p>
+        Soy <strong>Darío Erades</strong>, estudiante de <strong>Ingeniería Informática</strong> y desarrollador
+        con <strong>5 años de experiencia</strong> centrado en el ecosistema Java. Me apasiona construir sistemas
+        bien diseñados que escalan y soportan miles de usuarios sin parpadear.
+      </p>
+      <p>
+        He desarrollado infraestructura para <strong>comunidades de Discord de más de 25.000 miembros</strong>,
+        y he colaborado con <strong>youtubers de más de 400.000 suscriptores</strong> creando bots, automatizaciones
+        y herramientas internas a medida.
+      </p>
+      <p>
+        Disfruto resolviendo problemas difíciles, aprendiendo nuevas tecnologías y dejando el código mejor
+        de como lo encontré.
+      </p>
+    </div>
+
+    <div class="about__card reveal">
+      <div class="about__card-inner">
+        <div class="card-header">
+          <div class="dots"><span></span><span></span><span></span></div>
+          <span class="file">~/about.java</span>
+        </div>
+        <pre class="code"><code><span class="kw">public class</span> <span class="cls">Dario</span> <span class="kw">extends</span> <span class="cls">Developer</span> {
+  <span class="kw">private final</span> String[] stack = {
+    <span class="str">"Java"</span>, <span class="str">"Spring"</span>, <span class="str">"JDA"</span>, <span class="str">"SQL"</span>
+  };
+
+  <span class="kw">public</span> String getFocus() {
+    <span class="kw">return</span> <span class="str">"Backend robusto y bots escalables"</span>;
+  }
+
+  <span class="kw">public boolean</span> isLearning() {
+    <span class="kw">return</span> <span class="kw">true</span>; <span class="cmt">// siempre</span>
+  }
+}</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="section__head">
+    <span class="section__tag reveal">02 — Stack</span>
+    <h2 class="section__title reveal">Herramientas que <span class="gradient-text">domino.</span></h2>
+  </div>
+
+  <div class="skills__grid">
+    <div class="skill-card reveal" data-tilt>
+      <div class="skill-card__icon">☕</div>
+      <h3>Java</h3>
+      <p>Lenguaje principal. POO, concurrencia, JVM y mejores prácticas modernas.</p>
+      <div class="skill-bar"><i style="--p:95%"></i></div>
+    </div>
+    <div class="skill-card reveal" data-tilt>
+      <div class="skill-card__icon">🌱</div>
+      <h3>Spring Boot</h3>
+      <p>APIs REST, inyección de dependencias, seguridad y microservicios.</p>
+      <div class="skill-bar"><i style="--p:85%"></i></div>
+    </div>
+    <div class="skill-card reveal" data-tilt>
+      <div class="skill-card__icon">🤖</div>
+      <h3>Discord Bots (JDA)</h3>
+      <p>Bots escalables para comunidades grandes, slash commands y eventos.</p>
+      <div class="skill-bar"><i style="--p:95%"></i></div>
+    </div>
+    <div class="skill-card reveal" data-tilt>
+      <div class="skill-card__icon">🐍</div>
+      <h3>Python</h3>
+      <p>Automatizaciones, scripting, scraping y herramientas internas.</p>
+      <div class="skill-bar"><i style="--p:85%"></i></div>
+    </div>
+    <div class="skill-card reveal" data-tilt>
+      <div class="skill-card__icon">🟨</div>
+      <h3>JavaScript</h3>
+      <p>Frontend dinámico, Node.js, integraciones y APIs en tiempo real.</p>
+      <div class="skill-bar"><i style="--p:82%"></i></div>
+    </div>
+    <div class="skill-card reveal" data-tilt>
+      <div class="skill-card__icon">🎮</div>
+      <h3>C#</h3>
+      <p>Desarrollo de aplicaciones, plugins y mods para videojuegos.</p>
+      <div class="skill-bar"><i style="--p:78%"></i></div>
+    </div>
+    <div class="skill-card reveal" data-tilt>
+      <div class="skill-card__icon">🗄️</div>
+      <h3>Bases de Datos SQL</h3>
+      <p>MySQL, PostgreSQL, MariaDB. Modelado relacional y optimización de consultas.</p>
+      <div class="skill-bar"><i style="--p:88%"></i></div>
+    </div>
+    <div class="skill-card reveal" data-tilt>
+      <div class="skill-card__icon">🍃</div>
+      <h3>Bases de Datos NoSQL</h3>
+      <p>MongoDB, Redis. Caching, almacenamiento de documentos y datos en tiempo real.</p>
+      <div class="skill-bar"><i style="--p:85%"></i></div>
+    </div>
+    <div class="skill-card reveal" data-tilt>
+      <div class="skill-card__icon">💻</div>
+      <h3>Bash &amp; Shell Scripting</h3>
+      <p>Automatización de tareas, despliegues, cron jobs y mantenimiento de servidores.</p>
+      <div class="skill-bar"><i style="--p:90%"></i></div>
+    </div>
+    <div class="skill-card reveal" data-tilt>
+      <div class="skill-card__icon">🐧</div>
+      <h3>Linux Sysadmin (Avanzado)</h3>
+      <p>Administración avanzada de servidores Linux: systemd, nginx, hardening, backups, monitorización 24/7.</p>
+      <div class="skill-bar"><i style="--p:92%"></i></div>
+    </div>
+    <div class="skill-card reveal" data-tilt>
+      <div class="skill-card__icon">🌐</div>
+      <h3>Redes</h3>
+      <p>TCP/IP, DNS, VPN, firewalls (iptables/nftables), proxies inversos y troubleshooting.</p>
+      <div class="skill-bar"><i style="--p:88%"></i></div>
+    </div>
+    <div class="skill-card reveal" data-tilt>
+      <div class="skill-card__icon">🐳</div>
+      <h3>Docker &amp; DevOps</h3>
+      <p>Contenedores, despliegue continuo, orquestación y arquitecturas reproducibles.</p>
+      <div class="skill-bar"><i style="--p:82%"></i></div>
+    </div>
+    <div class="skill-card reveal" data-tilt>
+      <div class="skill-card__icon">⚡</div>
+      <h3>APIs &amp; Integraciones</h3>
+      <p>REST, WebSockets, webhooks y arquitecturas event-driven con servicios de terceros.</p>
+      <div class="skill-bar"><i style="--p:90%"></i></div>
+    </div>
+    <div class="skill-card reveal" data-tilt>
+      <div class="skill-card__icon">🔐</div>
+      <h3>Seguridad</h3>
+      <p>Autenticación, JWT, OAuth2, hashing, hardening de servidores y buenas prácticas OWASP.</p>
+      <div class="skill-bar"><i style="--p:80%"></i></div>
+    </div>
+    <div class="skill-card reveal" data-tilt>
+      <div class="skill-card__icon">🔧</div>
+      <h3>Git &amp; CI/CD</h3>
+      <p>Control de versiones avanzado, GitHub Actions, pipelines y flujos colaborativos.</p>
+      <div class="skill-bar"><i style="--p:88%"></i></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <div class="section__head">
+    <span class="section__tag reveal">03 — Trayectoria</span>
+    <h2 class="section__title reveal">5 años <span class="gradient-text">construyendo.</span></h2>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline__item reveal">
+      <div class="timeline__dot"></div>
+      <div class="timeline__content">
+        <span class="timeline__date">2022 — Actualidad</span>
+        <h3>Desarrollador principal · Canales +400K subs</h3>
+        <p>Desarrollador principal para canales de YouTube con audiencias de más de 400.000 suscriptores:
+           bots a medida, herramientas internas, integraciones con APIs externas y dashboards privados
+           usados a diario por sus equipos.</p>
+        <div class="tags"><span>Java</span><span>JDA</span><span>APIs</span><span>Backend</span></div>
+      </div>
+    </div>
+
+    <div class="timeline__item reveal">
+      <div class="timeline__dot"></div>
+      <div class="timeline__content">
+        <span class="timeline__date">2025 — Actualidad</span>
+        <h3>Desarrollador principal · Discord de KPI</h3>
+        <p>Empecé como desarrollador principal del Discord de <strong>KPI</strong>, una comunidad de más
+           de 25.000 miembros. Arquitectura y mantenimiento de un bot completo con base de datos,
+           panel web, sistema de niveles, moderación, economía y analítica en tiempo real.</p>
+        <div class="tags"><span>Java</span><span>SQL</span><span>Panel Web</span><span>Concurrencia</span></div>
+      </div>
+    </div>
+
+    <div class="timeline__item reveal">
+      <div class="timeline__dot"></div>
+      <div class="timeline__content">
+        <span class="timeline__date">2023 — Actualidad</span>
+        <h3>Ingeniería Informática</h3>
+        <p>Formación universitaria en algoritmia, estructuras de datos, sistemas operativos,
+           redes y arquitectura de software.</p>
+        <div class="tags"><span>Algoritmos</span><span>Sistemas</span><span>Redes</span></div>
+      </div>
+    </div>
+
+    <div class="timeline__item reveal">
+      <div class="timeline__dot"></div>
+      <div class="timeline__content">
+        <span class="timeline__date">2021</span>
+        <h3>Primer proyecto serio en Java</h3>
+        <p>El comienzo de un camino: aprender bien las bases, romper cosas, arreglarlas, repetir.</p>
+        <div class="tags"><span>Java</span><span>Aprendizaje</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="section__head">
+    <span class="section__tag reveal">04 — Trabajos</span>
+    <h2 class="section__title reveal">Proyectos <span class="gradient-text">destacados.</span></h2>
+  </div>
+
+  <div class="projects">
+    <a class="project reveal" data-tilt href="https://discord.gg/kpi" target="_blank" rel="noopener">
+      <div class="project__num">01</div>
+      <div class="project__body">
+        <h3>Bot de KPI · discord.gg/kpi</h3>
+        <p>Bot completo desarrollado para el Discord de KPI (+25.000 miembros). Incluye base de datos
+           robusta, panel web de administración, sistema de niveles, moderación automática, economía,
+           analítica en tiempo real e integraciones con APIs externas. Funcionando 24/7.</p>
+        <ul class="project__stack">
+          <li>Java</li><li>JDA</li><li>MySQL</li><li>Panel Web</li><li>REST</li>
+        </ul>
+      </div>
+      <div class="project__arrow">→</div>
+    </a>
+
+    <article class="project reveal" data-tilt>
+      <div class="project__num">02</div>
+      <div class="project__body">
+        <h3>Sistema de Licencias</h3>
+        <p>Plataforma de gestión de licencias con <strong>panel web</strong> completo y control
+           integrado desde <strong>Discord</strong>. Generación, validación, revocación y monitorización
+           de claves en tiempo real, con autenticación, logs y métricas de uso.</p>
+        <ul class="project__stack">
+          <li>Java</li><li>Spring Boot</li><li>SQL</li><li>JDA</li><li>JWT</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="project reveal" data-tilt>
+      <div class="project__num">03</div>
+      <div class="project__body">
+        <h3>Plugins privados para videojuegos</h3>
+        <p>Desarrollo a medida de plugins y modificaciones privadas para videojuegos: mecánicas
+           personalizadas, integraciones con backends externos, sistemas anti-cheat y herramientas
+           internas para staff. Trabajos confidenciales bajo NDA.</p>
+        <ul class="project__stack">
+          <li>Java</li><li>C#</li><li>APIs</li><li>SQL</li>
+        </ul>
+      </div>
+    </article>
+
+    <a class="project reveal" data-tilt href="https://github.com/DarioErades" target="_blank" rel="noopener">
+      <div class="project__num">04</div>
+      <div class="project__body">
+        <h3>Más en mi GitHub</h3>
+        <p>Experimentos, librerías, proyectos open source y herramientas. Todo lo que hago
+           públicamente lo encuentras en mi perfil de GitHub.</p>
+        <ul class="project__stack">
+          <li>Open Source</li><li>Java</li><li>Más...</li>
+        </ul>
+      </div>
+      <div class="project__arrow">→</div>
+    </a>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="contact__inner">
+    <span class="section__tag reveal">05 — Contacto</span>
+    <h2 class="contact__title reveal">
+      ¿Tienes una idea?<br/>
+      <span class="gradient-text">Hagámosla realidad.</span>
+    </h2>
+    <p class="contact__text reveal">
+      Si necesitas un desarrollador Java, un bot para tu comunidad, o simplemente quieres
+      saludar, escríbeme y te respondo cuanto antes.
+    </p>
+    <a href="mailto:contacto@darioerades.es" class="btn btn--primary btn--big magnetic reveal">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span>contacto@darioerades.es</span>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>© 2026 Darío Erades</span>
+  <span>Hecho con <em>café</em> y Java ☕</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
