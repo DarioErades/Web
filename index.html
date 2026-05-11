@@ -368,14 +368,29 @@
       ¿Tienes una idea?<br/>
       <span class="gradient-text">Hagámosla realidad.</span>
     </h2>
-    <p class="contact__text reveal">
-      Si necesitas un desarrollador Java, un bot para tu comunidad, o simplemente quieres
-      saludar, escríbeme y te respondo cuanto antes.
-    </p>
-    <a href="mailto:contacto@darioerades.es" class="btn btn--primary btn--big magnetic reveal">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      <span>contacto@darioerades.es</span>
-    </a>
+    
+    <form action="https://formspree.io/f/xdabbnvz" method="POST" class="contact__form reveal">
+      <div class="form__group">
+        <input type="text" name="name" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu email" required>
+      </div>
+      <div class="form__group">
+        <input type="text" name="subject" placeholder="Asunto">
+      </div>
+      <div class="form__group">
+        <textarea name="message" placeholder="¿En qué puedo ayudarte?" required></textarea>
+      </div>
+      <button type="submit" class="btn btn--primary btn--big magnetic">
+        <span>Enviar mensaje</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+      </button>
+      <div id="form-status"></div>
+    </form>
+
+    <div class="contact__direct reveal">
+      <p>O si lo prefieres:</p>
+      <a href="mailto:contacto@darioerades.es" class="contact__link">contacto@darioerades.es</a>
+    </div>
   </div>
 </section>
 

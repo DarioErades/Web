@@ -106,6 +106,38 @@
     });
   });
 
+  // Manejo del formulario vía AJAX
+  const form = document.querySelector('.contact__form');
+  const status = document.getElementById('form-status');
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      status.textContent = 'Enviando...';
+      
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        
+        if (response.ok) {
+          status.textContent = '¡Mensaje enviado con éxito! Te responderé pronto.';
+          status.className = 'success';
+          form.reset();
+        } else {
+          status.textContent = 'Ups! Hubo un problema al enviar el mensaje.';
+          status.className = 'error';
+        }
+      } catch (error) {
+        status.textContent = 'Ups! Hubo un problema al conectar con el servidor.';
+        status.className = 'error';
+      }
+    });
+  }
+
   document.querySelectorAll('[data-tilt]').forEach(el => {
     el.addEventListener('mousemove', (e) => {
       const r = el.getBoundingClientRect();
