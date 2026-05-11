@@ -1,6 +1,8 @@
 (() => {
   'use strict';
 
+  gsap.registerPlugin(ScrollTrigger);
+
   const dot = document.querySelector('.cursor-dot');
   let mx = 0, my = 0;
 
@@ -35,7 +37,7 @@
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
 
-  document.querySelectorAll('.reveal, .skill-card').forEach(el => io.observe(el));
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
   const typedEl = document.getElementById('typed');
   const phrases = [
@@ -60,25 +62,36 @@
   };
   setTimeout(type, 1200);
 
-  const statObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      const el = e.target;
-      const target = +el.dataset.count;
-      const dur = 1400;
-      const start = performance.now();
-      const tick = (now) => {
-        const p = Math.min(1, (now - start) / dur);
-        const eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = Math.floor(eased * target);
-        if (p < 1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-      statObs.unobserve(el);
-    });
-  }, { threshold: 0.5 });
+  // Animación de contadores con Pin (parar scroll de la página)
+  gsap.to({}, {
+    scrollTrigger: {
+      trigger: '.hero', // Usamos el hero como base para el pin si los stats están dentro
+      start: 'bottom 100%',
+      end: '+=1000',
+      pin: true,
+      scrub: true,
+      onUpdate: (self) => {
+        // Actualizamos los números basado en el progreso del scrollTrigger
+        document.querySelectorAll('.stat__num').forEach(el => {
+          const target = +el.dataset.count;
+          el.textContent = Math.floor(self.progress * target);
+        });
+      }
+    }
+  });
 
-  document.querySelectorAll('.stat__num').forEach(el => statObs.observe(el));
+  // Skills revertidas al comportamiento original (Intersection Observer)
+  const skillObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+        skillObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.skill-card').forEach(el => skillObs.observe(el));
 
   document.querySelectorAll('.magnetic').forEach(el => {
     const strength = 0.35;

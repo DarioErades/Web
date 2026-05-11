@@ -195,13 +195,23 @@ button{font-family:inherit}
 .code{padding:24px;font-family:'JetBrains Mono',monospace;font-size:.92rem;line-height:1.7;color:#cfd0e0;overflow-x:auto}
 .kw{color:#ff79c6}.cls{color:#8be9fd}.str{color:#f1fa8c}.cmt{color:#6272a4;font-style:italic}
 
+#skills{
+  padding: 140px 6vw;
+}
+
+#skills .section__tag, #skills .section__title{
+  opacity:1;
+  transform:none;
+}
+
 .skills__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
 .skill-card{
   position:relative;padding:32px;border-radius:var(--radius);
   background:var(--panel);border:1px solid var(--panel-border);
   backdrop-filter:blur(10px);overflow:hidden;
-  transition:transform .4s var(--ease),border-color .4s var(--ease);
+  transition:transform .4s var(--ease),border-color .4s var(--ease), opacity .9s var(--ease), transform .9s var(--ease);
   transform-style:preserve-3d;
+  opacity:0;transform:translateY(40px);
 }
 .skill-card::before{
   content:"";position:absolute;inset:-1px;border-radius:var(--radius);
