@@ -206,7 +206,7 @@
       "phrases": [
         'Java Developer',
         'Computer Engineering Student',
-        'Bot Creator for +20K users',
+        'Bot Creator for +40K users',
         'Backend Engineer',
         'Problem Solver'
       ]
