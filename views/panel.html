@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — Analíticas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root { --bg: #0a0a0a; --text: #ffffff; --primary: #b8ff3a; --card: #141414; --border: #222; }
+        body { background: var(--bg); color: var(--text); font-family: 'Space Grotesk', sans-serif; margin: 0; padding: 2rem; }
+        header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem; }
+        h1 { margin: 0; font-size: 1.8rem; }
+        .logout-btn { color: #888; text-decoration: none; font-size: 0.9rem; border: 1px solid var(--border); padding: 0.5rem 1rem; border-radius: 6px; }
+        .logout-btn:hover { color: #fff; background: #222; }
+        
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; }
+        .card h2 { font-size: 1rem; color: #888; margin-top: 0; margin-bottom: 1.5rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; }
+        
+        .big-number { font-size: 3rem; font-weight: 700; color: var(--primary); }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { text-align: left; padding: 0.75rem 0.5rem; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+        th { color: #555; text-transform: uppercase; font-size: 0.75rem; }
+        
+        .loading { text-align: center; padding: 5rem; font-style: italic; color: #555; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Panel de Analíticas</h1>
+        <a href="/logout" class="logout-btn">Cerrar sesión</a>
+    </header>
+
+    <div id="loading" class="loading">Cargando datos...</div>
+    
+    <div id="content" style="display: none;">
+        <div class="stats-grid">
+            <div class="card" style="grid-column: span 1;">
+                <h2>Visitas Totales</h2>
+                <div class="big-number" id="total-visits">0</div>
+            </div>
+
+            <div class="card">
+                <h2>Visitas por País</h2>
+                <canvas id="countryChart"></canvas>
+            </div>
+
+            <div class="card">
+                <h2>Últimos 7 días</h2>
+                <canvas id="dayChart"></canvas>
+            </div>
+
+            <div class="card">
+                <h2>Visitas por Hora</h2>
+                <canvas id="hourChart"></canvas>
+            </div>
+
+            <div class="card" style="grid-column: span 1;">
+                <h2>Visitas Recientes</h2>
+                <table id="recent-table">
+                    <thead>
+                        <tr>
+                            <th>País</th>
+                            <th>Ruta</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function loadData() {
+            try {
+                const response = await fetch('/api/analytics');
+                const data = await response.json();
+                
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+
+                // Total
+                document.getElementById('total-visits').textContent = data.totalVisits[0].count;
+
+                // Gráfico de Países
+                new Chart(document.getElementById('countryChart'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: data.byCountry.map(r => r.country),
+                        datasets: [{
+                            data: data.byCountry.map(r => r.count),
+                            backgroundColor: ['#b8ff3a', '#7c5cff', '#ff3a7c', '#3affb8', '#ffb83a'],
+                            borderColor: '#141414',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: { plugins: { legend: { position: 'bottom', labels: { color: '#888' } } } }
+                });
+
+                // Gráfico por Días
+                new Chart(document.getElementById('dayChart'), {
+                    type: 'line',
+                    data: {
+                        labels: data.byDay.map(r => r.day).reverse(),
+                        datasets: [{
+                            label: 'Visitas',
+                            data: data.byDay.map(r => r.count).reverse(),
+                            borderColor: '#b8ff3a',
+                            tension: 0.4
+                        }]
+                    },
+                    options: { 
+                        scales: { 
+                            y: { grid: { color: '#222' }, ticks: { color: '#555' } },
+                            x: { grid: { color: '#222' }, ticks: { color: '#555' } }
+                        },
+                        plugins: { legend: { display: false } }
+                    }
+                });
+
+                // Gráfico por Horas
+                new Chart(document.getElementById('hourChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: data.byHour.map(r => r.hour + ':00'),
+                        datasets: [{
+                            label: 'Visitas',
+                            data: data.byHour.map(r => r.count),
+                            backgroundColor: '#7c5cff'
+                        }]
+                    },
+                    options: { 
+                        scales: { 
+                            y: { grid: { color: '#222' }, ticks: { color: '#555' } },
+                            x: { grid: { color: '#222' }, ticks: { color: '#555' } }
+                        },
+                        plugins: { legend: { display: false } }
+                    }
+                });
+
+                // Tabla reciente
+                const tbody = document.querySelector('#recent-table tbody');
+                data.recent.forEach(r => {
+                    const row = document.createElement('tr');
+                    const date = new Date(r.timestamp).toLocaleString();
+                    row.innerHTML = `<td>${r.country}</td><td>${r.path}</td><td>${date}</td>`;
+                    tbody.appendChild(row);
+                });
+
+            } catch (err) {
+                console.error(err);
+                document.getElementById('loading').textContent = 'Error al cargar datos.';
+            }
+        }
+
+        loadData();
+    </script>
+</body>
+</html>
