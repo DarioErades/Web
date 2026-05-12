@@ -263,7 +263,7 @@ body.light-mode .moon-icon { display: block; }
   position:relative;padding:32px;border-radius:var(--radius);
   background:var(--panel);border:1px solid var(--panel-border);
   backdrop-filter:blur(10px);overflow:hidden;
-  transition:transform .4s var(--ease),border-color .4s var(--ease), opacity .9s var(--ease), transform .9s var(--ease);
+  transition:transform .4s var(--ease), border-color .4s var(--ease), opacity .9s var(--ease);
   transform-style:preserve-3d;
   opacity:0;transform:translateY(40px);
 }
@@ -271,7 +271,7 @@ body.light-mode .moon-icon { display: block; }
   content:"";position:absolute;inset:-1px;border-radius:var(--radius);
   background:var(--grad);opacity:0;transition:opacity .4s var(--ease);z-index:-1;
 }
-.skill-card:hover{border-color:transparent;transform:translateY(-6px)}
+.skill-card:hover{border-color:transparent}
 .skill-card:hover::before{opacity:.6}
 .skill-card__icon{font-size:2.4rem;margin-bottom:18px}
 .skill-card h3{font-size:1.35rem;margin-bottom:10px;font-weight:600}

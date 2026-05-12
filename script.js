@@ -47,7 +47,7 @@
       "nav-projects": "Proyectos",
       "nav-contact": "Contacto",
       "hero-tagline": "Disponible para proyectos",
-      "hero-description": "Construyendo software robusto en <strong>Java</strong> desde hace <strong>5 años</strong>. Estudiante de Ingeniería Informática, creador de bots usados por más de <strong>+40k personas</strong> y colaborador con creadores de contenido de más de <strong>+650k suscriptores</strong>.",
+      "hero-description": "Construyendo software robusto en <strong>Java</strong> desde hace <strong>5 años</strong>. Estudiante de Ingeniería Informática, creador de bots usados por más de <strong>+20k personas</strong> y colaborador con creadores de contenido de más de <strong>+650k suscriptores</strong>.",
       "hero-btn-projects": "Ver proyectos",
       "hero-btn-contact": "Hablemos",
       "hero-scroll": "Scroll",
@@ -56,7 +56,7 @@
       "stat-audience": "audiencia colaborada",
       "about-tag": "01 — Sobre mí",
       "about-title": "Especialista en backend <span class=\"gradient-text\">y soluciones escalables.</span>",
-      "about-description": "<p>Soy <strong>Darío Erades</strong>, estudiante de <strong>Ingeniería Informática</strong> y desarrollador con <strong>5 años de experiencia</strong> centrado en el ecosistema Java. Me apasiona construir sistemas bien diseñados que escalan y soportan miles de usuarios sin parpadear.</p><p>He desarrollado infraestructura para <strong>comunidades de Discord de más de +40k miembros</strong>, y he colaborado con <strong>youtubers de más de +650k suscriptores</strong> creando bots, automatizaciones y herramientas internas a medida.</p><p>Disfruto resolviendo problemas difíciles, aprendiendo nuevas tecnologías y dejando el código mejor de como lo encontré.</p>",
+      "about-description": "<p>Soy <strong>Darío Erades</strong>, estudiante de <strong>Ingeniería Informática</strong> y desarrollador con <strong>5 años de experiencia</strong> centrado en el ecosistema Java. Me apasiona construir sistemas bien diseñados que escalan y soportan miles de usuarios sin parpadear.</p><p>He desarrollado infraestructura para <strong>comunidades de Discord de más de +20k miembros</strong>, y he colaborado con <strong>youtubers de más de +650k suscriptores</strong> creando bots, automatizaciones y herramientas internas a medida.</p><p>Disfruto resolviendo problemas difíciles, aprendiendo nuevas tecnologías y dejando el código mejor de como lo encontré.</p>",
       "skills-tag": "02 — Stack",
       "skills-title": "Herramientas que <span class=\"gradient-text\">domino.</span>",
       "skill-java": "Lenguaje principal. POO, concurrencia, JVM y mejores prácticas modernas.",
@@ -78,7 +78,7 @@
       "exp-title": "5 años <span class=\"gradient-text\">construyendo.</span>",
       "exp-date-1": "2025 — Actualidad",
       "exp-role-1": "Desarrollador principal · Discord de KPI",
-      "exp-desc-1": "Empecé como desarrollador principal del Discord de <strong>KPI</strong>, una comunidad de más de +40k miembros. Arquitectura y mantenimiento de un bot completo con base de datos, panel web, sistema de niveles, moderación, economía y analítica en tiempo real.",
+      "exp-desc-1": "Empecé como desarrollador principal del Discord de <strong>KPI</strong>, una comunidad de más de +20k miembros. Arquitectura y mantenimiento de un bot completo con base de datos, panel web, sistema de niveles, moderación, economía y analítica en tiempo real.",
       "exp-date-2": "2023 — Actualidad",
       "exp-role-2": "Ingeniería Informática",
       "exp-desc-2": "Formación universitaria en algoritmia, estructuras de datos, sistemas operativos, redes y arquitectura de software.",
@@ -99,7 +99,7 @@
       "tag-learning": "Aprendizaje",
       "projects-tag": "03 — Trabajos",
       "projects-title": "Proyectos <span class=\"gradient-text\">destacados.</span>",
-      "project-desc-1": "Bot completo desarrollado para el Discord de KPI (+40k miembros). Incluye base de datos robusta, panel web de administración, sistema de niveles, moderación automática, economía, analítica en tiempo real e integraciones con APIs externas. Funcionando 24/7.",
+      "project-desc-1": "Bot completo desarrollado para el Discord de KPI (+20k miembros). Incluye base de datos robusta, panel web de administración, sistema de niveles, moderación automática, economía, analítica en tiempo real e integraciones con APIs externas. Funcionando 24/7.",
       "project-title-2": "Sistema de Licencias",
       "project-desc-2": "Plataforma de gestión de licencias con <strong>panel web</strong> completo y control integrado desde <strong>Discord</strong>. Generación, validación, revocación y monitorización de claves en tiempo real, con autenticación, logs y métricas de uso.",
       "project-title-3": "Plugins privados para videojuegos",
@@ -121,7 +121,7 @@
       "phrases": [
         'Desarrollador Java',
         'Estudiante de Ingeniería Informática',
-        'Creador de bots para +40K usuarios',
+        'Creador de bots para +20K usuarios',
         'Ingeniero de Backend',
         'Resolvedor de problemas'
       ]
@@ -132,7 +132,7 @@
       "nav-projects": "Projects",
       "nav-contact": "Contact",
       "hero-tagline": "Available for projects",
-      "hero-description": "Building robust software in <strong>Java</strong> for <strong>5 years</strong>. Computer Engineering student, creator of bots used by more than <strong>+40k people</strong> and collaborator with content creators with more than <strong>+650k subscribers</strong>.",
+      "hero-description": "Building robust software in <strong>Java</strong> for <strong>5 years</strong>. Computer Engineering student, creator of bots used by more than <strong>+20k people</strong> and collaborator with content creators with more than <strong>+650k subscribers</strong>.",
       "hero-btn-projects": "View projects",
       "hero-btn-contact": "Let's talk",
       "hero-scroll": "Scroll",
@@ -141,7 +141,7 @@
       "stat-audience": "collaborated audience",
       "about-tag": "01 — About me",
       "about-title": "Curious by nature, <span class=\"gradient-text\">engineer by vocation.</span>",
-      "about-description": "<p>I'm <strong>Darío Erades</strong>, a <strong>Computer Engineering</strong> student and developer with <strong>5 years of experience</strong> focused on the Java ecosystem. I am passionate about building well-designed systems that scale and support thousands of users without blinking.</p><p>I have developed infrastructure for <strong>Discord communities of more than +40k members</strong>, and have collaborated with <strong>youtubers with more than +650k subscribers</strong> creating custom bots, automations and internal tools.</p><p>I enjoy solving difficult problems, learning new technologies and leaving the code better than I found it.</p>",
+      "about-description": "<p>I'm <strong>Darío Erades</strong>, a <strong>Computer Engineering</strong> student and developer with <strong>5 years of experience</strong> focused on the Java ecosystem. I am passionate about building well-designed systems that scale and support thousands of users without blinking.</p><p>I have developed infrastructure for <strong>Discord communities of more than +20k members</strong>, and have collaborated with <strong>youtubers with more than +650k subscribers</strong> creating custom bots, automations and internal tools.</p><p>I enjoy solving difficult problems, learning new technologies and leaving the code better than I found it.</p>",
       "skills-tag": "02 — Stack",
       "skills-title": "Tools I <span class=\"gradient-text\">master.</span>",
       "skill-java": "Core language. OOP, concurrency, JVM and modern best practices.",
@@ -163,7 +163,7 @@
       "exp-title": "5 years <span class=\"gradient-text\">building.</span>",
       "exp-date-1": "2025 — Present",
       "exp-role-1": "Lead Developer · KPI Discord",
-      "exp-desc-1": "Started as lead developer for <strong>KPI</strong> Discord, a community of over +40k members. Architecture and maintenance of a complete bot with database, web panel, level system, moderation, economy and real-time analytics.",
+      "exp-desc-1": "Started as lead developer for <strong>KPI</strong> Discord, a community of over +20k members. Architecture and maintenance of a complete bot with database, web panel, level system, moderation, economy and real-time analytics.",
       "exp-date-2": "2023 — Present",
       "exp-role-2": "Computer Engineering",
       "exp-desc-2": "University training in algorithms, data structures, operating systems, networks and software architecture.",
@@ -184,7 +184,7 @@
       "tag-learning": "Learning",
       "projects-tag": "03 — Works",
       "projects-title": "Featured <span class=\"gradient-text\">projects.</span>",
-      "project-desc-1": "Complete bot developed for KPI Discord (+40k members). Includes robust database, web administration panel, level system, automatic moderation, economy, real-time analytics and integrations with external APIs. Running 24/7.",
+      "project-desc-1": "Complete bot developed for KPI Discord (+20k members). Includes robust database, web administration panel, level system, automatic moderation, economy, real-time analytics and integrations with external APIs. Running 24/7.",
       "project-title-2": "License System",
       "project-desc-2": "License management platform with a complete <strong>web panel</strong> and integrated control from <strong>Discord</strong>. Real-time key generation, validation, revocation and monitoring, with authentication, logs and usage metrics.",
       "project-title-3": "Private Game Plugins",
@@ -206,7 +206,7 @@
       "phrases": [
         'Java Developer',
         'Computer Engineering Student',
-        'Bot Creator for +40K users',
+        'Bot Creator for +20K users',
         'Backend Engineer',
         'Problem Solver'
       ]
@@ -306,6 +306,7 @@
       if (e.isIntersecting) {
         e.target.style.opacity = '1';
         e.target.style.transform = 'translateY(0)';
+        e.target.classList.add('visible');
         skillObs.unobserve(e.target);
       }
     });
@@ -379,10 +380,10 @@
       const r = el.getBoundingClientRect();
       const x = (e.clientX - r.left) / r.width - 0.5;
       const y = (e.clientY - r.top) / r.height - 0.5;
-      el.style.transform = `perspective(1000px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-4px)`;
+      el.style.transform = `perspective(1000px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg)`;
     });
     el.addEventListener('mouseleave', () => {
-      el.style.transform = '';
+      el.style.transform = 'translateY(0)';
     });
   });
 
