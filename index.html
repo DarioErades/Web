@@ -26,16 +26,23 @@
     <span class="logo-bracket"><</span>DE<span class="logo-bracket">/></span>
   </a>
   <ul class="nav__links">
-    <li><a href="#about" data-text="Sobre mí">Sobre mí</a></li>
-    <li><a href="#skills" data-text="Skills">Skills</a></li>
-    <li><a href="#experience" data-text="Experiencia">Experiencia</a></li>
-    <li><a href="#projects" data-text="Proyectos">Proyectos</a></li>
-    <li><a href="#contact" data-text="Contacto">Contacto</a></li>
+    <li><a href="#about" data-text="Sobre mí" data-i18n="nav-about">Sobre mí</a></li>
+    <li><a href="#skills" data-text="Skills" data-i18n="nav-skills">Skills</a></li>
+    <li><a href="#experience" data-text="Experiencia" data-i18n="nav-experience">Experiencia</a></li>
+    <li><a href="#projects" data-text="Proyectos" data-i18n="nav-projects">Proyectos</a></li>
+    <li><a href="#contact" data-text="Contacto" data-i18n="nav-contact">Contacto</a></li>
   </ul>
-  <a href="https://github.com/DarioErades" target="_blank" rel="noopener" class="nav__cta magnetic">
-    <span>GitHub</span>
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
-  </a>
+  <div class="nav__actions">
+    <button id="theme-toggle" class="nav__icon-btn magnetic" aria-label="Cambiar tema">
+      <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M17.66 6.34l1.42-1.42"/></svg>
+      <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button id="lang-toggle" class="nav__lang-btn magnetic" aria-label="Cambiar idioma">ES</button>
+    <a href="https://github.com/DarioErades" target="_blank" rel="noopener" class="nav__cta magnetic">
+      <span>GitHub</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+    </a>
+  </div>
 </nav>
 
 <section class="hero" id="home">
@@ -43,7 +50,7 @@
   <div class="hero__content">
     <div class="hero__tagline reveal">
       <span class="dot"></span>
-      <span>Disponible para proyectos</span>
+      <span data-i18n="hero-tagline">Disponible para proyectos</span>
     </div>
     <h1 class="hero__title">
       <span class="line"><span class="word">Darío</span></span>
@@ -52,29 +59,29 @@
     <p class="hero__subtitle reveal">
       <span class="typed" id="typed"></span><span class="cursor-blink">|</span>
     </p>
-    <p class="hero__description reveal">
+    <p class="hero__description reveal" data-i18n="hero-description">
       Construyendo software robusto en <strong>Java</strong> desde hace <strong>5 años</strong>.
       Estudiante de Ingeniería Informática, creador de bots usados por más de <strong>25.000 personas</strong>
       y colaborador con creadores de contenido de más de <strong>400.000 suscriptores</strong>.
     </p>
     <div class="hero__actions reveal">
       <a href="#projects" class="btn btn--primary magnetic">
-        <span>Ver proyectos</span>
+        <span data-i18n="hero-btn-projects">Ver proyectos</span>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
-      <a href="#contact" class="btn btn--ghost magnetic">Hablemos</a>
+      <a href="#contact" class="btn btn--ghost magnetic" data-i18n="hero-btn-contact">Hablemos</a>
     </div>
   </div>
 
   <div class="hero__scroll">
-    <span>Scroll</span>
+    <span data-i18n="hero-scroll">Scroll</span>
     <div class="hero__scroll-line"></div>
   </div>
 
   <div class="hero__stats">
-    <div class="stat"><span class="stat__num" data-count="5">0</span><span class="stat__plus">+</span><span class="stat__label">años de experiencia</span></div>
-    <div class="stat"><span class="stat__num" data-count="25">0</span><span class="stat__plus">K+</span><span class="stat__label">usuarios alcanzados</span></div>
-    <div class="stat"><span class="stat__num" data-count="400">0</span><span class="stat__plus">K+</span><span class="stat__label">audiencia colaborada</span></div>
+    <div class="stat"><span class="stat__num" data-count="5">0</span><span class="stat__plus">+</span><span class="stat__label" data-i18n="stat-experience">años de experiencia</span></div>
+    <div class="stat"><span class="stat__num" data-count="25">0</span><span class="stat__plus">K+</span><span class="stat__label" data-i18n="stat-users">usuarios alcanzados</span></div>
+    <div class="stat"><span class="stat__num" data-count="400">0</span><span class="stat__plus">K+</span><span class="stat__label" data-i18n="stat-audience">audiencia colaborada</span></div>
   </div>
 </section>
 
@@ -99,12 +106,12 @@
 
 <section class="section" id="about">
   <div class="section__head">
-    <span class="section__tag reveal">01 — Sobre mí</span>
-    <h2 class="section__title reveal">Curioso por naturaleza, <span class="gradient-text">ingeniero por vocación.</span></h2>
+    <span class="section__tag reveal" data-i18n="about-tag">01 — Sobre mí</span>
+    <h2 class="section__title reveal" data-i18n="about-title">Curioso por naturaleza, <span class="gradient-text">ingeniero por vocación.</span></h2>
   </div>
 
   <div class="about__grid">
-    <div class="about__text reveal">
+    <div class="about__text reveal" data-i18n="about-description">
       <p>
         Soy <strong>Darío Erades</strong>, estudiante de <strong>Ingeniería Informática</strong> y desarrollador
         con <strong>5 años de experiencia</strong> centrado en el ecosistema Java. Me apasiona construir sistemas
@@ -147,99 +154,99 @@
 
 <section class="section" id="skills">
   <div class="section__head">
-    <span class="section__tag">02 — Stack</span>
-    <h2 class="section__title">Herramientas que <span class="gradient-text">domino.</span></h2>
+    <span class="section__tag" data-i18n="skills-tag">02 — Stack</span>
+    <h2 class="section__title" data-i18n="skills-title">Herramientas que <span class="gradient-text">domino.</span></h2>
   </div>
 
   <div class="skills__grid">
     <div class="skill-card" data-tilt>
       <div class="skill-card__icon">☕</div>
       <h3>Java</h3>
-      <p>Lenguaje principal. POO, concurrencia, JVM y mejores prácticas modernas.</p>
+      <p data-i18n="skill-java">Lenguaje principal. POO, concurrencia, JVM y mejores prácticas modernas.</p>
       <div class="skill-bar"><i style="--p:95%"></i></div>
     </div>
     <div class="skill-card" data-tilt>
       <div class="skill-card__icon">🌱</div>
       <h3>Spring Boot</h3>
-      <p>APIs REST, inyección de dependencias, seguridad y microservicios.</p>
+      <p data-i18n="skill-spring">APIs REST, inyección de dependencias, seguridad y microservicios.</p>
       <div class="skill-bar"><i style="--p:85%"></i></div>
     </div>
     <div class="skill-card" data-tilt>
       <div class="skill-card__icon">🤖</div>
       <h3>Discord Bots (JDA)</h3>
-      <p>Bots escalables para comunidades grandes, slash commands y eventos.</p>
+      <p data-i18n="skill-discord">Bots escalables para comunidades grandes, slash commands y eventos.</p>
       <div class="skill-bar"><i style="--p:95%"></i></div>
     </div>
     <div class="skill-card" data-tilt>
       <div class="skill-card__icon">🐍</div>
       <h3>Python</h3>
-      <p>Automatizaciones, scripting, scraping y herramientas internas.</p>
+      <p data-i18n="skill-python">Automatizaciones, scripting, scraping y herramientas internas.</p>
       <div class="skill-bar"><i style="--p:85%"></i></div>
     </div>
     <div class="skill-card" data-tilt>
       <div class="skill-card__icon">🟨</div>
       <h3>JavaScript</h3>
-      <p>Frontend dinámico, Node.js, integraciones y APIs en tiempo real.</p>
+      <p data-i18n="skill-js">Frontend dinámico, Node.js, integraciones y APIs en tiempo real.</p>
       <div class="skill-bar"><i style="--p:82%"></i></div>
     </div>
     <div class="skill-card" data-tilt>
       <div class="skill-card__icon">🎮</div>
       <h3>C#</h3>
-      <p>Desarrollo de aplicaciones, plugins y mods para videojuegos.</p>
+      <p data-i18n="skill-csharp">Desarrollo de aplicaciones, plugins y mods para videojuegos.</p>
       <div class="skill-bar"><i style="--p:78%"></i></div>
     </div>
     <div class="skill-card" data-tilt>
       <div class="skill-card__icon">🗄️</div>
       <h3>Bases de Datos SQL</h3>
-      <p>MySQL, PostgreSQL, MariaDB. Modelado relacional y optimización de consultas.</p>
+      <p data-i18n="skill-sql">MySQL, PostgreSQL, MariaDB. Modelado relacional y optimización de consultas.</p>
       <div class="skill-bar"><i style="--p:88%"></i></div>
     </div>
     <div class="skill-card" data-tilt>
       <div class="skill-card__icon">🍃</div>
       <h3>Bases de Datos NoSQL</h3>
-      <p>MongoDB, Redis. Caching, almacenamiento de documentos y datos en tiempo real.</p>
+      <p data-i18n="skill-nosql">MongoDB, Redis. Caching, almacenamiento de documentos y datos en tiempo real.</p>
       <div class="skill-bar"><i style="--p:85%"></i></div>
     </div>
     <div class="skill-card" data-tilt>
       <div class="skill-card__icon">💻</div>
       <h3>Bash &amp; Shell Scripting</h3>
-      <p>Automatización de tareas, despliegues, cron jobs y mantenimiento de servidores.</p>
+      <p data-i18n="skill-bash">Automatización de tareas, despliegues, cron jobs y mantenimiento de servidores.</p>
       <div class="skill-bar"><i style="--p:90%"></i></div>
     </div>
     <div class="skill-card" data-tilt>
       <div class="skill-card__icon">🐧</div>
       <h3>Linux Sysadmin (Avanzado)</h3>
-      <p>Administración avanzada de servidores Linux: systemd, nginx, hardening, backups, monitorización 24/7.</p>
+      <p data-i18n="skill-linux">Administración avanzada de servidores Linux: systemd, nginx, hardening, backups, monitorización 24/7.</p>
       <div class="skill-bar"><i style="--p:92%"></i></div>
     </div>
     <div class="skill-card" data-tilt>
       <div class="skill-card__icon">🌐</div>
       <h3>Redes</h3>
-      <p>TCP/IP, DNS, VPN, firewalls (iptables/nftables), proxies inversos y troubleshooting.</p>
+      <p data-i18n="skill-networks">TCP/IP, DNS, VPN, firewalls (iptables/nftables), proxies inversos y troubleshooting.</p>
       <div class="skill-bar"><i style="--p:88%"></i></div>
     </div>
     <div class="skill-card" data-tilt>
       <div class="skill-card__icon">🐳</div>
       <h3>Docker &amp; DevOps</h3>
-      <p>Contenedores, despliegue continuo, orquestación y arquitecturas reproducibles.</p>
+      <p data-i18n="skill-docker">Contenedores, despliegue continuo, orquestación y arquitecturas reproducibles.</p>
       <div class="skill-bar"><i style="--p:82%"></i></div>
     </div>
     <div class="skill-card" data-tilt>
       <div class="skill-card__icon">⚡</div>
       <h3>APIs &amp; Integraciones</h3>
-      <p>REST, WebSockets, webhooks y arquitecturas event-driven con servicios de terceros.</p>
+      <p data-i18n="skill-apis">REST, WebSockets, webhooks y arquitecturas event-driven con servicios de terceros.</p>
       <div class="skill-bar"><i style="--p:90%"></i></div>
     </div>
     <div class="skill-card" data-tilt>
       <div class="skill-card__icon">🔐</div>
       <h3>Seguridad</h3>
-      <p>Autenticación, JWT, OAuth2, hashing, hardening de servidores y buenas prácticas OWASP.</p>
+      <p data-i18n="skill-security">Autenticación, JWT, OAuth2, hashing, hardening de servidores y buenas prácticas OWASP.</p>
       <div class="skill-bar"><i style="--p:80%"></i></div>
     </div>
     <div class="skill-card" data-tilt>
       <div class="skill-card__icon">🔧</div>
       <h3>Git &amp; CI/CD</h3>
-      <p>Control de versiones avanzado, GitHub Actions, pipelines y flujos colaborativos.</p>
+      <p data-i18n="skill-git">Control de versiones avanzado, GitHub Actions, pipelines y flujos colaborativos.</p>
       <div class="skill-bar"><i style="--p:88%"></i></div>
     </div>
   </div>
@@ -247,43 +254,43 @@
 
 <section class="section" id="experience">
   <div class="section__head">
-    <span class="section__tag reveal">03 — Trayectoria</span>
-    <h2 class="section__title reveal">5 años <span class="gradient-text">construyendo.</span></h2>
+    <span class="section__tag reveal" data-i18n="exp-tag">03 — Trayectoria</span>
+    <h2 class="section__title reveal" data-i18n="exp-title">5 años <span class="gradient-text">construyendo.</span></h2>
   </div>
 
   <div class="timeline">
     <div class="timeline__item reveal">
       <div class="timeline__dot"></div>
       <div class="timeline__content">
-        <span class="timeline__date">2025 — Actualidad</span>
-        <h3>Desarrollador principal · Discord de KPI</h3>
-        <p>Empecé como desarrollador principal del Discord de <strong>KPI</strong>, una comunidad de más
+        <span class="timeline__date" data-i18n="exp-date-1">2025 — Actualidad</span>
+        <h3 data-i18n="exp-role-1">Desarrollador principal · Discord de KPI</h3>
+        <p data-i18n="exp-desc-1">Empecé como desarrollador principal del Discord de <strong>KPI</strong>, una comunidad de más
            de 25.000 miembros. Arquitectura y mantenimiento de un bot completo con base de datos,
            panel web, sistema de niveles, moderación, economía y analítica en tiempo real.</p>
-        <div class="tags"><span>Java</span><span>SQL</span><span>Panel Web</span><span>Concurrencia</span></div>
+        <div class="tags"><span data-i18n="tag-java">Java</span><span data-i18n="tag-sql">SQL</span><span data-i18n="tag-webpanel">Panel Web</span><span data-i18n="tag-concurrency">Concurrencia</span></div>
       </div>
     </div>
 
     <div class="timeline__item reveal">
       <div class="timeline__dot"></div>
       <div class="timeline__content">
-        <span class="timeline__date">2023 — Actualidad</span>
-        <h3>Ingeniería Informática</h3>
-        <p>Formación universitaria en algoritmia, estructuras de datos, sistemas operativos,
+        <span class="timeline__date" data-i18n="exp-date-2">2023 — Actualidad</span>
+        <h3 data-i18n="exp-role-2">Ingeniería Informática</h3>
+        <p data-i18n="exp-desc-2">Formación universitaria en algoritmia, estructuras de datos, sistemas operativos,
            redes y arquitectura de software.</p>
-        <div class="tags"><span>Algoritmos</span><span>Sistemas</span><span>Redes</span></div>
+        <div class="tags"><span data-i18n="tag-algos">Algoritmos</span><span data-i18n="tag-systems">Sistemas</span><span data-i18n="tag-networks">Redes</span></div>
       </div>
     </div>
 
     <div class="timeline__item reveal">
       <div class="timeline__dot"></div>
       <div class="timeline__content">
-        <span class="timeline__date">2022 — Actualidad</span>
-        <h3>Desarrollador principal · Canales +400K subs</h3>
-        <p>Desarrollador principal para canales de YouTube con audiencias de más de 400.000 suscriptores:
+        <span class="timeline__date" data-i18n="exp-date-3">2022 — Actualidad</span>
+        <h3 data-i18n="exp-role-3">Desarrollador principal · Canales +400K subs</h3>
+        <p data-i18n="exp-desc-3">Desarrollador principal para canales de YouTube con audiencias de más de 400.000 suscriptores:
            bots a medida, herramientas internas, integraciones con APIs externas y dashboards privados
            usados a diario por sus equipos.</p>
-        <div class="tags"><span>Java</span><span>JDA</span><span>APIs</span><span>Backend</span></div>
+        <div class="tags"><span>Java</span><span>JDA</span><span data-i18n="tag-apis">APIs</span><span data-i18n="tag-backend">Backend</span></div>
       </div>
     </div>
 
@@ -291,9 +298,9 @@
       <div class="timeline__dot"></div>
       <div class="timeline__content">
         <span class="timeline__date">2021</span>
-        <h3>Primer proyecto serio en Java</h3>
-        <p>El comienzo de un camino: aprender bien las bases, romper cosas, arreglarlas, repetir.</p>
-        <div class="tags"><span>Java</span><span>Aprendizaje</span></div>
+        <h3 data-i18n="exp-role-4">Primer proyecto serio en Java</h3>
+        <p data-i18n="exp-desc-4">El comienzo de un camino: aprender bien las bases, romper cosas, arreglarlas, repetir.</p>
+        <div class="tags"><span>Java</span><span data-i18n="tag-learning">Aprendizaje</span></div>
       </div>
     </div>
   </div>
@@ -301,30 +308,30 @@
 
 <section class="section" id="projects">
   <div class="section__head">
-    <span class="section__tag reveal">04 — Trabajos</span>
-    <h2 class="section__title reveal">Proyectos <span class="gradient-text">destacados.</span></h2>
+    <span class="section__tag reveal" data-i18n="projects-tag">04 — Trabajos</span>
+    <h2 class="section__title reveal" data-i18n="projects-title">Proyectos <span class="gradient-text">destacados.</span></h2>
   </div>
 
   <div class="projects">
-    <a class="project reveal" data-tilt href="https://discord.gg/kpi" target="_blank" rel="noopener">
+    <a class="project" data-tilt href="https://discord.gg/kpi" target="_blank" rel="noopener">
       <div class="project__num">01</div>
       <div class="project__body">
         <h3>Bot de KPI · discord.gg/kpi</h3>
-        <p>Bot completo desarrollado para el Discord de KPI (+25.000 miembros). Incluye base de datos
+        <p data-i18n="project-desc-1">Bot completo desarrollado para el Discord de KPI (+25.000 miembros). Incluye base de datos
            robusta, panel web de administración, sistema de niveles, moderación automática, economía,
            analítica en tiempo real e integraciones con APIs externas. Funcionando 24/7.</p>
         <ul class="project__stack">
-          <li>Java</li><li>JDA</li><li>MySQL</li><li>Panel Web</li><li>REST</li>
+          <li>Java</li><li>JDA</li><li>MySQL</li><li data-i18n="tag-webpanel">Panel Web</li><li>REST</li>
         </ul>
       </div>
       <div class="project__arrow">→</div>
     </a>
 
-    <article class="project reveal" data-tilt>
+    <article class="project" data-tilt>
       <div class="project__num">02</div>
       <div class="project__body">
-        <h3>Sistema de Licencias</h3>
-        <p>Plataforma de gestión de licencias con <strong>panel web</strong> completo y control
+        <h3 data-i18n="project-title-2">Sistema de Licencias</h3>
+        <p data-i18n="project-desc-2">Plataforma de gestión de licencias con <strong>panel web</strong> completo y control
            integrado desde <strong>Discord</strong>. Generación, validación, revocación y monitorización
            de claves en tiempo real, con autenticación, logs y métricas de uso.</p>
         <ul class="project__stack">
@@ -333,27 +340,27 @@
       </div>
     </article>
 
-    <article class="project reveal" data-tilt>
+    <article class="project" data-tilt>
       <div class="project__num">03</div>
       <div class="project__body">
-        <h3>Plugins privados para videojuegos</h3>
-        <p>Desarrollo a medida de plugins y modificaciones privadas para videojuegos: mecánicas
+        <h3 data-i18n="project-title-3">Plugins privados para videojuegos</h3>
+        <p data-i18n="project-desc-3">Desarrollo a medida de plugins y modificaciones privadas para videojuegos: mecánicas
            personalizadas, integraciones con backends externos, sistemas anti-cheat y herramientas
            internas para staff. Trabajos confidenciales bajo NDA.</p>
         <ul class="project__stack">
-          <li>Java</li><li>C#</li><li>APIs</li><li>SQL</li>
+          <li>Java</li><li>C#</li><span data-i18n="tag-apis">APIs</span><li>SQL</li>
         </ul>
       </div>
     </article>
 
-    <a class="project reveal" data-tilt href="https://github.com/DarioErades" target="_blank" rel="noopener">
+    <a class="project" data-tilt href="https://github.com/DarioErades" target="_blank" rel="noopener">
       <div class="project__num">04</div>
       <div class="project__body">
-        <h3>Más en mi GitHub</h3>
-        <p>Experimentos, librerías, proyectos open source y herramientas. Todo lo que hago
+        <h3 data-i18n="project-title-4">Más en mi GitHub</h3>
+        <p data-i18n="project-desc-4">Experimentos, librerías, proyectos open source y herramientas. Todo lo que hago
            públicamente lo encuentras en mi perfil de GitHub.</p>
         <ul class="project__stack">
-          <li>Open Source</li><li>Java</li><li>Más...</li>
+          <li data-i18n="tag-opensource">Open Source</li><li>Java</li><li data-i18n="tag-more">Más...</li>
         </ul>
       </div>
       <div class="project__arrow">→</div>
@@ -363,32 +370,32 @@
 
 <section class="section contact" id="contact">
   <div class="contact__inner">
-    <span class="section__tag reveal">05 — Contacto</span>
-    <h2 class="contact__title reveal">
+    <span class="section__tag reveal" data-i18n="contact-tag">05 — Contacto</span>
+    <h2 class="contact__title reveal" data-i18n="contact-title">
       ¿Tienes una idea?<br/>
       <span class="gradient-text">Hagámosla realidad.</span>
     </h2>
     
     <form action="https://formspree.io/f/xdabbnvz" method="POST" class="contact__form reveal">
       <div class="form__group">
-        <input type="text" name="name" placeholder="Tu nombre" required>
-        <input type="email" name="email" placeholder="Tu email" required>
+        <input type="text" name="name" placeholder="Tu nombre" data-i18n-placeholder="contact-name" required>
+        <input type="email" name="email" placeholder="Tu email" data-i18n-placeholder="contact-email" required>
       </div>
       <div class="form__group">
-        <input type="text" name="subject" placeholder="Asunto">
+        <input type="text" name="subject" placeholder="Asunto" data-i18n-placeholder="contact-subject">
       </div>
       <div class="form__group">
-        <textarea name="message" placeholder="¿En qué puedo ayudarte?" required></textarea>
+        <textarea name="message" placeholder="¿En qué puedo ayudarte?" data-i18n-placeholder="contact-message" required></textarea>
       </div>
       <button type="submit" class="btn btn--primary btn--big magnetic">
-        <span>Enviar mensaje</span>
+        <span data-i18n="contact-send">Enviar mensaje</span>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
       </button>
       <div id="form-status"></div>
     </form>
 
     <div class="contact__direct reveal">
-      <p>O si lo prefieres:</p>
+      <p data-i18n="contact-direct">O si lo prefieres:</p>
       <a href="mailto:contacto@darioerades.es" class="contact__link">contacto@darioerades.es</a>
     </div>
   </div>
@@ -396,7 +403,7 @@
 
 <footer class="footer">
   <span>© 2026 Darío Erades</span>
-  <span>Hecho con <em>café</em> y Java ☕</span>
+  <span data-i18n="footer-made">Hecho con <em>café</em> y Java ☕</span>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
