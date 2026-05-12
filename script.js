@@ -406,8 +406,8 @@
   const resize = () => {
     W = canvas.width = window.innerWidth * window.devicePixelRatio;
     H = canvas.height = window.innerHeight * window.devicePixelRatio;
-    canvas.style.width = window.innerWidth + 'px';
-    canvas.style.height = window.innerHeight + 'px';
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
     initParticles();
   };
 
