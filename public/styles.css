@@ -306,8 +306,8 @@ body.light-mode .moon-icon { display: block; }
 }
 .section__title{font-size:clamp(2.2rem,6vw,5rem);font-weight:700;letter-spacing:-.03em;line-height:1;max-width:1000px}
 
-.about__grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:start}
-@media(max-width:900px){.about__grid{grid-template-columns:1fr}}
+.about__grid{display:grid;grid-template-columns:minmax(0, 1.1fr) minmax(0, 1fr);gap:60px;align-items:start}
+@media(max-width:900px){.about__grid{grid-template-columns:minmax(0, 1fr)}}
 .about__text p{font-size:1.1rem;line-height:1.8;color:#c4c4d0;margin-bottom:20px}
 .about__text strong{color:var(--text)}
 
